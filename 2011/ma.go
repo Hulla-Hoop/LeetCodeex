@@ -1,10 +1,10 @@
-package main
+package ex
 
 import "fmt"
 
 //46 это точка 91-  [    93-  ]
 
-func finalValueAfterOperations(operations []string) int {
+func FinalValueAfterOperations(operations []string) int {
 	var summ int
 
 	one := "++X"
@@ -23,8 +23,4 @@ func finalValueAfterOperations(operations []string) int {
 	}
 
 	return summ
-}
-
-func main() {
-	fmt.Println(finalValueAfterOperations([]string{"X++", "X--"}))
 }

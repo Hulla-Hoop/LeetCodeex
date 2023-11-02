@@ -1,10 +1,8 @@
-package main
-
-import "fmt"
+package ex1108
 
 //46 это точка 91-  [    93-  ]
 
-func defangIPaddr(address string) string {
+func DefangIPaddr(address string) string {
 
 	runeAddress := []rune(address)
 
@@ -13,7 +11,7 @@ func defangIPaddr(address string) string {
 		if runeAddress[i] == rune(46) {
 			temp := runeAddress[i+1:]
 			temp2 := runeAddress[0:i]
-			temp3 := defangIPaddr(string(temp))
+			temp3 := DefangIPaddr(string(temp))
 			g := []rune{}
 			g = append(g, temp2...)
 			g = append(g, rune(91), runeAddress[i], rune(93))
@@ -23,8 +21,4 @@ func defangIPaddr(address string) string {
 
 	}
 	return string(runeAddress)
-}
-
-func main() {
-	fmt.Println(defangIPaddr("255.2.4.5"))
 }
