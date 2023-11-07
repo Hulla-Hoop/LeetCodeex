@@ -34,6 +34,19 @@ func PartitionStringTwo(s string) int {
 }
 
 func PartitionStringThree(s string) int {
+	var yolo []byte
+	counter := 1
+	for i := 0; i < len(s); i++ {
+		for o := 0; o < len(yolo); o++ {
+			if s[i] == yolo[o] {
+				counter++
+				yolo = nil
+				break
+			}
+		}
 
-	return 2
+		yolo = append(yolo, s[i])
+
+	}
+	return counter
 }
