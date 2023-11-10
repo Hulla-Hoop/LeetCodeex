@@ -19,6 +19,7 @@ func Constructor() Codec {
 	}
 }
 
+// TODO сделать свое решение проблемы
 // Encodes a URL to a shortened URL.
 func (c *Codec) encode(longUrl string) string {
 	path := randStr(5)
