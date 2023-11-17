@@ -4,6 +4,7 @@ import (
 	"fmt"
 )
 
+// TODO доделать
 func FindAndReplacePattern(words []string, pattern string) []string {
 	AMap := make(map[byte]byte)
 	var out []string
